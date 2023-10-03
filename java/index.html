@@ -1,12 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <script src="counter3.js"></script>
-    <title>Phạm Văn Anh -2121050414</title>
+    <h1>Phạm Văn Anh-2121050414</h1>
+    <script>
+        document.addEventListener('DOMContentLoaded',function(){
+            document.querySelector('#form').onsubmit = sayHello;
+        });
+        function sayHello(){
+            const name = document.querySelector('#name').value;
+            alert('Hello ${name}!');
+        }
+    </script>
+
 </head>
 <body>
-    <h1 id="counter">0</h1>
-    <button>Click here!</button>
+    <form id="form">
+        <input type="text" id="name" autofocus placeholder="Name">
+        <input type="submit">
+    </form>
 
 </body>
 </html>
