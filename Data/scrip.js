@@ -1,18 +1,24 @@
-var userSettings = document.querySelector(".user-settings");
-var darkBtn = document.getElementById("dark-button");
-var LoadMoreBackground =document.querySelector(".btn-LoadMore");
-function UserSettingToggle(){
-    userSettings.classList.toggle("user-setting-showup-toggle");
+// Modal
+var modal = document.getElementById("myModal");
+var btn = document.getElementById("cart");
+var close = document.getElementsByClassName("close")[0];
+// tại sao lại có [0] như  thế này bởi vì mỗi close là một html colection nên khi mình muốn lấy giá trị html thì phải thêm [0]. 
+var close_footer = document.getElementsByClassName("close-footer")[0];
+var order = document.getElementsByClassName("order")[0];
+btn.onclick = function () {
+  modal.style.display = "block";
 }
-// darkBtn.onclick = function(){
-//     darkBtn.classList.toggle("dark-mode-on");
-// }
-
-function darkModeON(){
-    darkBtn.classList.toggle("dark-mode-on");
-   document.body.classList.toggle("dark-theme");
-};
-
-function LoadMoreToggle(){
-    LoadMoreBackground.classList.toggle("loadMoreToggle");
-};
+close.onclick = function () {
+  modal.style.display = "none";
+}
+close_footer.onclick = function () {
+  modal.style.display = "none";
+}
+order.onclick = function () {
+  alert("Cảm ơn bạn đã thanh toán đơn hàng")
+}
+window.onclick = function (event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+}

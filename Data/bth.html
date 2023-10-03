@@ -3,340 +3,219 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-	<link rel="stylesheet" href="./themify-icons/themify-icons.css">
-    <title>Socialbook - html css template</title>
-    <script src="https://kit.fontawesome.com/ef7e2b893b.js" crossorigin="anonymous"></script>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Shopping-cart</title>
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"
+        integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/reponsive.css" />
 </head>
 
 <body>
-    <nav class="navbar">
-        <div class="nav-left"><img class="logo" src="./images/logo.png" alt="">
-            <ul class="navlogo">
-                <li><img src="images/notification.png"></li>
-                <li><img src="images/inbox.png"></li>
-                <li><img src="images/video.png"></li>
+    <!-- header -->
+    <header>
+        <nav>
+            <div class="img-nav">
+                <img src="img/logo.png" alt="" />
+            </div>
+            <div class="content-nav">
+                <ul>
+                    <li><a href="#">Trang Chủ</a></li>
+                    <li><a href="#">Sản Phẩm</a></li>
+                    <li><a href="#">Liên Hệ</a></li>
+                    <li><a href="#">Giới Thiệu</a></li>
+                </ul>
+                <form>
+                    <input type="text" name="search" placeholder="Tìm kiếm sản phẩm..." />
+                    <button type="submit"><i class="fa fa-search" aria-hidden="true"></i></button>
+                </form>
+            </div>
+            <!-- The Modal -->
+            <button id="cart">
+                <i class="fa fa-shopping-basket" aria-hidden="true"></i>
+                Giỏ Hàng
+            </button>
+            <div id="myModal" class="modal">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title">Giỏ Hàng</h5>
+                        <span class="close">&times;</span>
+                    </div>
+                    <div class="modal-body">
+                        <div class="cart-row">
+                            <span class="cart-item cart-header cart-column">Sản Phẩm</span>
+                            <span class="cart-price cart-header cart-column">Giá</span>
+                            <span class="cart-quantity cart-header cart-column">Số Lượng</span>
+                        </div>
+                        <div class="cart-items">
+
+                        </div>
+                        <div class="cart-total">
+                            <strong class="cart-total-title">Tổng Cộng:</strong>
+                            <span class="cart-total-price">0VNĐ</span>
+                        </div>
+                    </div>
+
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary close-footer">Đóng</button>
+                        <button type="button" class="btn btn-primary order">Thanh Toán</button>
+                    </div>
+                </div>
+            </div>
+            <!-- content -->
+    <section class="wrapper">
+        <div class="products">
+            <ul>
+                <li class="main-product">
+                    <div class="img-product">
+                        <img class="img-prd"
+                            src="https://bizweb.dktcdn.net/thumb/large/100/228/168/products/sualai.jpg?v=1573720306000"
+                            alt="">
+                    </div>
+                    <div class="content-product">
+                        <h3 class="content-product-h3">Mũi Hàn 500</h3>
+                        <div class="content-product-deltals">
+                            <div class="price">
+                                <span class="money">25000đ</span>
+                            </div>
+                            <button type="button" class="btn btn-cart">Thêm Vào Giỏ</button>
+                        </div>
+                    </div>
+                </li>
+                <li class="main-product">
+                    <div class="img-product">
+                        <img class="img-prd"
+                            src="https://bizweb.dktcdn.net/thumb/large/100/228/168/products/sp1-57698689-e2c0-429a-bf4f-3bd0f39230d8.jpg?v=1575337954000"
+                            alt="">
+                    </div>
+                    <div class="content-product">
+                        <h3 class="content-product-h3">Trạm Hàn Hakko 942 75W 200-480*C 220VAC Cực Nóng</h3>
+                        <div class="content-product-deltals">
+                            <div class="price">
+                                <span class="money">1299000đ</span>
+                            </div>
+                            <button type="button" class="btn btn-cart">Thêm Vào Giỏ</button>
+                        </div>
+                    </div>
+                </li>
+                <li class="main-product">
+                    <div class="img-product">
+                        <img class="img-prd"
+                            src="https://bizweb.dktcdn.net/thumb/large/100/228/168/products/sp1-a45a32a1-38d4-4a8a-9c37-e936013858b2.jpg?v=1575877003000"
+                            alt="">
+                    </div>
+                    <div class="content-product">
+                        <h3 class="content-product-h3">Máy Bơm Chìm Hộ Gia Đình QDX 1500W 220VAC 40L/1min H=8m</h3>
+                        <div class="content-product-deltals">
+                            <div class="price">
+                                <span class="money">1599000đ</span>
+                            </div>
+                            <button type="button" class="btn btn-cart">Thêm Vào Giỏ</button>
+                        </div>
+                    </div>
+                </li>
+                <li class="main-product no-margin">
+                    <div class="img-product">
+                        <img class="img-prd"
+                            src="https://bizweb.dktcdn.net/thumb/large/100/228/168/products/module-diy-sac-khong-day-5.jpg?v=1570011041000"
+                            alt="">
+                    </div>
+                    <div class="content-product">
+                        <h3 class="content-product-h3">Module DIY Sạc Không Dây Qi IOS/Androi - Bộ phát V2</h3>
+                        <div class="content-product-deltals">
+                            <div class="price">
+                                <span class="money">89000đ</span>
+                            </div>
+                            <button type="button" class="btn btn-cart">Thêm Vào Giỏ</button>
+                        </div>
+                    </div>
+                </li>
+                <li class="main-product">
+                    <div class="img-product">
+                        <img class="img-prd"
+                            src="https://bizweb.dktcdn.net/thumb/large/100/228/168/products/bo-dieu-chinh-dien-ap-sdty-200p.jpg?v=1560155769920"
+                            alt="">
+                    </div>
+                    <div class="content-product">
+                        <h3 class="content-product-h3">Bộ Điều Chỉnh Điện Áp CHLVFU SDTY-200P 20KW 200A (BH 06 Tháng)
+                        </h3>
+                        <div class="content-product-deltals">
+                            <div class="price">
+                                <span class="money">2199000đ</span>
+                            </div>
+                            <button type="button" class="btn btn-cart">Thêm Vào Giỏ</button>
+                        </div>
+                    </div>
+                </li>
+                <li class="main-product">
+                    <div class="img-product">
+                        <img class="img-prd"
+                            src="https://bizweb.dktcdn.net/thumb/large/100/228/168/products/isd1760-thu-am-thanh-phat-am-thanh-2.jpg?v=1568951032960"
+                            alt="">
+                    </div>
+                    <div class="content-product">
+                        <h3 class="content-product-h3">Module ISD1760 Thu Âm Thanh - Phát Âm Thanh 75s</h3>
+                        <div class="content-product-deltals">
+                            <div class="price">
+                                <span class="money">115000đ</span>
+                            </div>
+                            <button type="button" class="btn btn-cart">Thêm Vào Giỏ</button>
+                        </div>
+                    </div>
+                </li>
+                <li class="main-product">
+                    <div class="img-product">
+                        <img class="img-prd"
+                            src="https://bizweb.dktcdn.net/thumb/large/100/228/168/products/new-arrival-b-plus-64-bit-quad-2.jpg?v=1568277329707"
+                            alt="">
+                    </div>
+                    <div class="content-product">
+                        <h3 class="content-product-h3">Raspberry Pi 3 E14 Model B Plus B+ 2.4G/5G Bluetooth</h3>
+                        <div class="content-product-deltals">
+                            <div class="price">
+                                <span class="money">1295000đ</span>
+                            </div>
+                            <button type="button" class="btn btn-cart">Thêm Vào Giỏ</button>
+                        </div>
+                    </div>
+                </li>
+                <li class="main-product no-margin">
+                    <div class="img-product">
+                        <img class="img-prd"
+                            src="https://bizweb.dktcdn.net/thumb/large/100/228/168/products/module-iot-esp8266-esp-12e-ch340-3.jpg?v=1565950165000"
+                            alt="">
+                    </div>
+                    <div class="content-product">
+                        <h3 class="content-product-h3">Module IOT ESP8266 ESP-12E CH340 V3</h3>
+                        <div class="content-product-deltals">
+                            <div class="price">
+                                <span class="money">85000đ</span>
+                            </div>
+                            <button type="button" class="btn btn-cart">Thêm Vào Giỏ</button>
+                        </div>
+                    </div>
+                </li>
             </ul>
         </div>
-        <div class="nav-right">
-            <div class="search">
-                <img src="images/search.png" alt="">
-                <input type="text" placeholder="Search">
+         <!-- footer -->
+    <footer>
+        <div class="footer-item">
+            <div class="img-footer">
+                <img src="img/logo.png" alt="" />
             </div>
-            <div class="profile-image online" onclick="UserSettingToggle()">
-                <img src="images/profile-pic.png" alt="">
-            </div>
+            <div class="social-footer">
+                <li><a target="_blank" href="https://www.facebook.com/thanhlongdev">
+                        <i class="fa fa-facebook-square" aria-hidden="true"></i>
+                    </a></li>
+                <li><a target="_blank" href="https://github.com/long1211">
+                        <i class="fa fa-github-square" aria-hidden="true"></i>
+                    </a></li>
 
-        </div>
-        <div class="user-settings">
-            <div class="profile-darkButton">
-            <div class="user-profile">
-                <img src="images/profile-pic.png" alt="">
-                <div>
-                    <p> Alex Carry</p>
-                    <a href="#">See your profile</a>
-                </div>
-            </div>
-            <div id="dark-button" onclick="darkModeON()">
-                <span></span>
-            </div>
-            </div>
-            <hr>
-            <div class="user-profile">
-                <img src="images/feedback.png" alt="">
-                <div>
-                    <p> Give Feedback</p>
-                    <a href="#">Help us to improve</a>
-                </div>
-            </div>
-            <hr>
-            <div class="settings-links">
-                <img src="images/setting.png" alt="" class="settings-icon">
-                <a href="#">Settings & Privary <img src="images/arrow.png" alt=""></a>
-            </div>
-
-            <div class="settings-links">
-                <img src="images/help.png" alt="" class="settings-icon">
-                <a href="#">Help & Support <img src="images/arrow.png" alt=""></a>
-            </div>
-
-            <div class="settings-links">
-                <img src="images/Display.png" alt="" class="settings-icon">
-                <a href="#">Display & Accessibility <img src="images/arrow.png" alt=""></a>
-            </div>
-
-            <div class="settings-links">
-                <img src="images/logout.png" alt="" class="settings-icon">
-                <a href="#">Logout <img src="images/arrow.png" alt=""></a>
-            </div>
-
-        </div>
-    </nav>
-
-    <!-- content-area------------ -->
-
-    <div class="container">
-        <div class="left-sidebar">
-            <div class="important-links">
-                <a href="#"><img src="images/news.png" alt="">Latest News</a>
-                <a href="#"><img src="images/friends.png" alt="">Friends</a>
-                <a href="#"><img src="images/group.png" alt="">Groups</a>
-                <a href="#"><img src="images/marketplace.png" alt="">marketplace</a>
-                <a href="#"><img src="images/watch.png" alt="">Watch</a>
-                <a href="#">See More</a>
-            </div>
-
-            <div class="shortcut-links">
-                <p>Your Shortcuts</p>
-                <a href="#"> <img src="images/shortcut-1.png" alt="">Web Developers</a>
-                <a href="#"> <img src="images/shortcut-2.png" alt="">Web Design Course</a>
-                <a href="#"> <img src="images/shortcut-3.png" alt="">Full Stack Development</a>
-                <a href="#"> <img src="images/shortcut-4.png" alt="">Website Experts</a>
             </div>
         </div>
-
-        <!-- main-content------- -->
-
-        <div class="content-area">
-            <div class="story-gallery">
-                <div class="story story1">
-                    <img src="images/upload.png" alt="">
-                    <p>Post Story</p>
-                </div>
-                <div class="story story2">
-                    <img src="images/member-1.png" alt="">
-                    <p>Alison</p>
-                </div>
-                <div class="story story3">
-                    <img src="images/member-2.png" alt="">
-                    <p>Jackson</p>
-                </div>
-                <div class="story story4">
-                    <img src="images/member-3.png" alt="">
-                    <p>Samona</p>
-                </div>
-                <div class="story story5">
-                    <img src="images/member-4.png" alt="">
-                    <p>John</p>
-                </div>
-            </div>
-
-            <div class="write-post-container">
-                <div class="user-profile">
-                    <img src="images/profile-pic.png" alt="">
-                    <div>
-                        <p> Alex Carry</p>
-                        <small>Public <i class="fas fa-caret-down"></i></small>
-                    </div>
-                </div>
-
-                <div class="post-upload-textarea">
-                    <textarea name="" placeholder="What's on your mind, Alex?" id="" cols="30" rows="3"></textarea>
-                    <div class="add-post-links">
-                        <a href="#"><img src="images/live-video.png" alt="">Live Video</a>
-                        <a href="#"><img src="images/photo.png" alt="">Photo/Video</a>
-                        <a href="#"><img src="images/feeling.png" alt="">Feeling Activity</a>
-                    </div>
-                </div>
-            </div>
-
-            <div class="status-field-container write-post-container">
-                <div class="user-profile-box">
-                    <div class="user-profile">
-                        <img src="images/profile-pic.png" alt="">
-                        <div>
-                            <p> Alex Carry</p>
-                            <small>August 13 1999, 09.18 pm</small>
-                        </div>
-                    </div>
-                    <div>
-                        <a href="#"><i class="fas fa-ellipsis-v"></i></a>
-                    </div>
-                </div>
-                <div class="status-field">
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis dolores praesentium dicta
-                        laborum nihil accusantium odit laboriosam, sed sit autem! <a
-                            href="#">#This_Post_is_Better!!!!</a> </p>
-                    <img src="images/feed-image-1.png" alt="">
-
-                </div>
-                <div class="post-reaction">
-                    <div class="activity-icons">
-                        <div><img src="images/like-blue.png" alt="">120</div>
-                        <div><img src="images/comments.png" alt="">52</div>
-                        <div><img src="images/share.png" alt="">35</div>
-                    </div>
-                    <div class="post-profile-picture">
-                        <img src="images/profile-pic.png " alt=""> <i class=" fas fa-caret-down"></i>
-                    </div>
-                </div>
-            </div>
-            <div class="status-field-container write-post-container">
-                <div class="user-profile-box">
-                    <div class="user-profile">
-                        <img src="images/profile-pic.png" alt="">
-                        <div>
-                            <p> Alex Carry</p>
-                            <small>August 13 1999, 09.18 pm</small>
-                        </div>
-                    </div>
-                    <div>
-                        <a href="#"><i class="fas fa-ellipsis-v"></i></a>
-                    </div>
-                </div>
-                <div class="status-field">
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis dolores praesentium dicta
-                        laborum nihil accusantium odit laboriosam, sed sit autem! <a
-                            href="#">#This_Post_is_Bigger!!!!</a> </p>
-                    <img src="images/feed-image-2.png" alt="">
-
-                </div>
-                <div class="post-reaction">
-                    <div class="activity-icons">
-                        <div><img src="images/like-blue.png" alt="">120</div>
-                        <div><img src="images/comments.png" alt="">52</div>
-                        <div><img src="images/share.png" alt="">35</div>
-                    </div>
-                    <div class="post-profile-picture">
-                        <img src="images/profile-pic.png " alt=""> <i class=" fas fa-caret-down"></i>
-                    </div>
-                </div>
-            </div>
-            <div class="status-field-container write-post-container">
-                <div class="user-profile-box">
-                    <div class="user-profile">
-                        <img src="images/profile-pic.png" alt="">
-                        <div>
-                            <p> Alex Carry</p>
-                            <small>August 13 1999, 09.18 pm</small>
-                        </div>
-                    </div>
-                    <div>
-                        <a href="#"><i class="fas fa-ellipsis-v"></i></a>
-                    </div>
-                </div>
-                <div class="status-field">
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis dolores praesentium dicta
-                        laborum nihil accusantium odit laboriosam, sed sit autem! <a
-                            href="#">#This_Post_is_faster!!!!</a> </p>
-                    <img src="images/feed-image-3.png" alt="">
-
-                </div>
-                <div class="post-reaction">
-                    <div class="activity-icons">
-                        <div><img src="images/like-blue.png" alt="">120</div>
-                        <div><img src="images/comments.png" alt="">52</div>
-                        <div><img src="images/share.png" alt="">35</div>
-                    </div>
-                    <div class="post-profile-picture">
-                        <img src="images/profile-pic.png " alt=""> <i class=" fas fa-caret-down"></i>
-                    </div>
-                </div>
-            </div>
-            <div class="status-field-container write-post-container">
-                <div class="user-profile-box">
-                    <div class="user-profile">
-                        <img src="images/profile-pic.png" alt="">
-                        <div>
-                            <p> Alex Carry</p>
-                            <small>August 13 1999, 09.18 pm</small>
-                        </div>
-                    </div>
-                    <div>
-                        <a href="#"><i class="fas fa-ellipsis-v"></i></a>
-                    </div>
-                </div>
-                <div class="status-field">
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis dolores praesentium dicta
-                        laborum nihil accusantium odit laboriosam, sed sit autem! <a
-                            href="#">#This_Post_is_perfect!!!!</a> </p>
-                    <img src="images/feed-image-4.png" alt="">
-
-                </div>
-                <div class="post-reaction">
-                    <div class="activity-icons">
-                        <div><img src="images/like-blue.png" alt="">120</div>
-                        <div><img src="images/comments.png" alt="">52</div>
-                        <div><img src="images/share.png" alt="">35</div>
-                    </div>
-                    <div class="post-profile-picture">
-                        <img src="images/profile-pic.png " alt=""> <i class=" fas fa-caret-down"></i>
-                    </div>
-                </div>
-            </div>
-            <button type="button" class="btn-LoadMore" onclick="LoadMoreToggle()">Load More</button>
-        </div>
-
-        <!-- sidebar------------ -->
-        <div class="right-sidebar">
-            <div class="heading-link">
-                <h4>Events</h4>
-                <a href="">See All</a>
-            </div>
-
-            <div class="events">
-                <div class="left-event">
-                    <h4>13</h4>
-                    <span>august</span>
-                </div>
-                <div class="right-event">
-                    <h4>Social Media</h4>
-                    <p> <i class="fas fa-map-marker-alt"></i> wisdom em Park</p>
-                    <a href="#">More Info</a>
-                </div>
-            </div>
-            <div class="events">
-                <div class="left-event">
-                    <h4>18</h4>
-                    <span>January</span>
-                </div>
-                <div class="right-event">
-                    <h4>Mobile Marketing</h4>
-                    <p><i class="fas fa-map-marker-alt"></i> wisdom em Park</p>
-                    <a href="#">More Info</a>
-                </div>
-            </div>
-
-            <div class="heading-link">
-                <h4>Advertisement</h4>
-                <a href="">Close</a>
-            </div>
-            <div class="advertisement">
-                <img src="images/advertisement.png" class="advertisement-image" alt="">
-            </div>
-
-            <div class="heading-link">
-                <h4>Conversation</h4>
-                <a href="">Hide Chat</a>
-            </div>
-
-            <div class="online-list">
-                <div class="online">
-                    <img src="images/member-1.png" alt="">
-                </div>
-                <p>Alison Mina</p>
-            </div>
-
-            <div class="online-list">
-                <div class="online">
-                    <img src="images/member-2.png" alt="">
-                </div>
-                <p>Jackson Aston</p>
-            </div>
-            <div class="online-list">
-                <div class="online">
-                    <img src="images/member-3.png" alt="">
-                </div>
-                <p>Samona Rose</p>
-            </div>
-        </div>
-    </div>
-    <footer id="footer">
-        <p>&copy; Copyright 2021 - Socialbook All Rights Reserved</p>
     </footer>
+    </section>
+        </nav>
 
-    <script src="function.js"></script>
-</body>
-</html>
+    </header>
