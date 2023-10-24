@@ -1,15 +1,20 @@
 <html>
     <head>
         <script>
-            document.addEventListener('DOMContentLoaded'),function(){
+            document.addEventListener('DOMEContentLoad',function(){
+                document.querySelector('#submit').disabled = true;
+                document.querySelector('#task').ankeyup=function(){
+                    document.querySelector('#submit').disabled = false;
+                };
                 document.querySelector('#new-task').onsubmit=function(){
-                    const li = document.createElement('Li');
+                    const li = document.createElement('#task').value;
                     li.innerHTML = document.querySelector('#task').value;
                     document.querySelector('#tasks').append(li);
-                    document.querySelector('task').value = "";
+                    document.querySelector('#task').value='';
+                    document.querySelector('#submit').disabled=true;
                     return false;
                 };
-            };
+            });
         </script>
         <title>Tasks</title>
     </head>
@@ -19,8 +24,8 @@
 
         </ul>
         <form id="new-task">
-            <input type="text" id="task" autofocus placeholder="New Task">
-            <input type="submit">
+            <input id="task" autocomplete="off" autofocus placeholder="New Task" type="text">
+            <input id="submit" type="submit">
         </form>
     </body>
 </html>
