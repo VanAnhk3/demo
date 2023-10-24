@@ -1,25 +1,20 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>My website</title>
     <script>
-        document.addEventListener('DOMContentLoaded', function(){
-            document.querySelector('#red').onclick = function(){
-                document.querySelector('#hello').style.color = 'red';
-            };
-            document.querySelector('#blue').onclick = function(){
-                document.querySelector('#hello').style.color = 'blue';
-            };
-            document.querySelector('#green').onclick = function(){
-                document.querySelector('#hello').style.color = 'green';
-            };
+        document.addEventListener('DOMContentLoaded', function() {
+            document.querySelectorAll('.color-change').forEach(function(button) {
+                button.onclick = function() {
+                    document.querySelector('#hello').style.color = button.dataset.color;
+                }
+            });
         });
     </script>
 </head>
 <body>
-    <h1 id="hello">Phạm Văn Anh-2121050414</h1>
-    <button id="red">Red</button>
-    <button id="blue">Blue</button>
-    <button id="green">Green</button>
+    <h1 id="hello">Phạm VăN Anh-2121050414</h1>
+    <button class="color-change" data-color="red">red</button>
+    <button class="color-change" data-color="blue">blue</button>
+    <button class="color-change" data-color="green">green</button>
 </body>
 </html>
