@@ -5,18 +5,16 @@
 <script>
 $(document).ready(function(){
   $("button").click(function(){
-    $("p").hide("slow", function(){
-      alert("The paragraph is now hidden");
-    });
+    $("#p1").css("color", "red").slideUp(2000).slideDown(2000);
   });
 });
 </script>
 </head>
 <body>
 
-<button>Hide</button>
+<p id="p1">jQuery is fun!!</p>
 
-<p>Phạm Văn Anh-2121050414.</p>
+<button>Phạm Văn Anh-2121050414</button>
 
 </body>
 </html>
